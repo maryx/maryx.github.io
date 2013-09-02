@@ -1,14 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Glass%20Antiqua');
+@import url('https://fonts.googleapis.com/css?family=Averia%20Serif%20Libre');
+
+html{
+height: 100%;
+padding: 0;
+margin: 0;
+scrolling: no;
+}
+body{
+overflow: hidden; /*hide scrolling*/
+scrolling: no;
+height: 100%;
+padding: 0;
+margin: 0;
+background-color: #ff8888;
+}
+div.layout{
+width: 100%;
+height: 100%;
+}
+div.panel{
+width: 100%;
+height: auto;
+}
+div.pan{
+width: 200px;
+height: 200px;
+display:inline-block;
+border-style: dashed;
+border-width: 5px;
+border-color: #001200;
+margin: 7px;
+border-radius: 5px;
+font-size: 4em;
+font-family: Glass Antiqua;
+font-weight: bold;
+text-shadow: 0 0 0.15em #000000;
+text-align: center;
+color: #FFFFFF;
+vertical-align: middle;
+line-height: 100%;
+}
+div.pan:hover{ /*Everything else is same as div.pan*/
+border-style: dotted;
+border-color: #FAAADB;
+text-shadow: 0 0 0.1em #FFFFFF, 0 0 1em #FF2040;
+color: #000000;
+}
+
+/*Text*/
 h1
 {
-font-size:2em;
+font-size:7em;
+font-family: Tangerine;
+line-height: 110%;
+margin-bottom:0px;
+margin-top: 0px;
 }
-html, body { height: 100%; padding: 0; margin: 0; }
-div.box { width: 80%; height: 80%; float: center;}
-div.layout { width: 100%; height: 100%; float: center;}
-div.panel { width: 33%; height: 50%; float: left; }
-#div1 { background: #DDD; }
-#div2 { background: #AAA; }
-#div3 { background: #777; }
-#div4 { background: #444; }
-#div5 { background: #400; }
-#div6 { background: #700; }
+h2
+{
+font-size:2em;
+font-style:bold;
+font-family: Glass Antiqua;
+line-height: 78%;
+margin-bottom:0px;
+text-shadow: 0 0 0.3em #FFFFFF;
+}
+p{
+}
+
+/*Other*/
+img{
+border-style: dashed;
+border-width: 5px;
+border-color: #001200;
+margin: 7px;
+border-radius: 5px;
+}
+img:hover{
+border-style: dotted;
+border-width: 5px;
+border-color: #FAAADB;
+margin: 7px;
+border-radius: 5px;
+}
