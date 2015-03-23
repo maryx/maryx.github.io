@@ -14,7 +14,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: #FF8888;
+    background-color: #FF6699;
 }
 div.section {
     width: 100%; 
@@ -52,8 +52,8 @@ div.text {
     width: 50%;
 }
 div.side-menu {
-    width: 40px;
-    height: 60px;
+    width: 60px;
+    height: 40px;
     border-style: dashed;
     border-width: 3px;
     border-color: #001200;
@@ -62,6 +62,7 @@ div.side-menu {
     font-size: 1.1em;
     font-family: 'Glass Antiqua';
     font-weight: bold;
+    text-decoration: none;
     text-shadow: 0 0 0.15em #000000;
     text-align: center;
     color: #FFFFFF;
@@ -74,7 +75,7 @@ div.side-menu:hover {
     border-color: #FAAADB;
 }
 #menu {
-    position: fixed; /*or absolute*/
+    position: fixed; /* or absolute */
     top: 0;
     left: 0;
     width: 100%:
@@ -83,10 +84,11 @@ div.side-menu:hover {
 }
 a.tab {
     target="_blank";
+    text-decoration: none;
 }
 
-/*Text*/
-h1 {
+/* Text */
+h1 { /* TODO: actually use this */
     font-size: 40px;
     font-family: 'Tangerine';
     line-height: 110%;
@@ -96,17 +98,18 @@ h1 {
 h2 {
     font-size: 3em;
     font-style:bold;
-    font-family: Glass Antiqua;
+    font-family: 'Glass Antiqua';
     line-height: 78%;
-    margin-bottom:0px;
+    margin-bottom: 0;
+    paddig-bottom: 10px;
     text-shadow: 0 0 0.3em #FFFFFF;
 }
 p, li {
     font-size: 1em;
-    font-family: Averia Serif Libre;
+    font-family: 'Averia Serif Libre';
 }
 
-/*Other*/
+/* Other */
 img {
     border-style: dashed;
     border-width: 5px;
@@ -123,5 +126,5 @@ img:hover {
 }
 
 table {
-    display:in-line;
+    display: in-line;
 }
