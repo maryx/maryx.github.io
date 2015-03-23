@@ -14,7 +14,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: #ff8888;
+    background-color: #FF8888;
 }
 div.section {
     width: 100%; 
@@ -27,14 +27,14 @@ div.panel {
 div.box {
     width: 200px;
     height: 200px;
-    display:inline-block;
+    display: inline-block;
     border-style: dashed;
     border-width: 5px;
     border-color: #001200;
     margin: 7px;
     border-radius: 5px;
     font-size: 3em;
-    font-family: Glass Antiqua;
+    font-family: 'Glass Antiqua';
     font-weight: bold;
     text-shadow: 0 0 0.15em #000000;
     text-align: center;
@@ -52,15 +52,15 @@ div.text {
     width: 50%;
 }
 div.side-menu {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 60px;
     border-style: dashed;
     border-width: 3px;
     border-color: #001200;
     margin: 7px;
     border-radius: 5px;
     font-size: 1.1em;
-    font-family: Glass Antiqua;
+    font-family: 'Glass Antiqua';
     font-weight: bold;
     text-shadow: 0 0 0.15em #000000;
     text-align: center;
@@ -68,12 +68,17 @@ div.side-menu {
     vertical-align: middle;
     line-height: 100%;
 }
+div.side-menu:hover {
+    border-style: dotted;
+    border-width: 3px;
+    border-color: #FAAADB;
+}
 #menu {
-    position:fixed; /*or absolute*/
-    top:0;
-    left:0;
-    width:100%:
-    background:none;
+    position: fixed; /*or absolute*/
+    top: 0;
+    left: 0;
+    width: 100%:
+    background: none;
     z-index: 1;
 }
 a.tab {
@@ -82,14 +87,14 @@ a.tab {
 
 /*Text*/
 h1 {
-    font-size:7em;
-    font-family: Tangerine;
+    font-size: 40px;
+    font-family: 'Tangerine';
     line-height: 110%;
-    margin-bottom:0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 h2 {
-    font-size:3em;
+    font-size: 3em;
     font-style:bold;
     font-family: Glass Antiqua;
     line-height: 78%;
