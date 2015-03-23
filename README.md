@@ -1,4 +1,4 @@
 site
 ====
 
-Personal website at www.seas.upenn.edu/~maryx
+Personal website at maryx.github.io
