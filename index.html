@@ -4,14 +4,14 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 <head>
     <script>
-		document.onload = function() {
+		window.onload = function() {
 		    setBoxColor();
+		    sparkles();
 		}
-
 		function getRandomColor() {
-		    return 'rgb(' + Math.random() * 256 +
-		           ' ,' + Math.random() * 256 +
-                   ' ,' + Math.random() * 256 + ')';
+		    return 'rgb(' + Math.floor(Math.random() * 256) +
+		           ' ,' + Math.floor(Math.random() * 256) +
+                   ' ,' + Math.floor(Math.random() * 256) + ')';
 		}
 		function setBoxColor() {
 		    var boxes = document.getElementsByClassName('box');
@@ -19,7 +19,10 @@
 		        boxes[i].style.backgroundColor = getRandomColor();
 		    }
 		    return;
-		};
+		}
+		function sparkles() {
+			
+		}
     </script>
 </head>
 
