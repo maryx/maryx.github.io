@@ -6,13 +6,15 @@
     <script>
 		document.onload(setBoxColor());
 		function getRandomColor() {
-		    return 'rgb(Math.random() * 256, Math.random() * 256, Math.random() * 256)';
+		    return 'rgb(' + Math.random() * 256 +
+		           ' ,' + Math.random() * 256 +
+                   ' ,' + Math.random() * 256 + ')';
 		}
 		function setBoxColor() {
 		    var boxes = document.getElementsByClassName('box');
-		    boxes.forEach(function(box) {
-		        box.style.backgroundColor = getRandomColor();
-		    });
+		    for (var i = 0; i < boxes.length; i++) {
+		        boxes[i].style.backgroundColor = getRandomColor();
+		    }
 		    return;
 		};
     </script>
