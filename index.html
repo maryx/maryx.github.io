@@ -6,7 +6,8 @@
     <script>
 		window.onload = function() {
 		    setBoxColor();
-		    sparkles();
+		    sparkle();
+		    document.addEventListener('mousemove', function() {sparkle();});
 		}
 		function getRandomColor() {
 		    return 'rgb(' + Math.floor(Math.random() * 256) +
@@ -20,7 +21,7 @@
 		    }
 		    return;
 		}
-		function sparkles() {
+		function sparkle() {
 			var sparkles = document.getElementById('sparkles');
 			var rows = 25;
 			var cols = 600;
@@ -36,6 +37,8 @@
 				sparkleString += rowString + '<BR>';
             }
 			sparkles.innerHTML = sparkleString;
+		}
+		function startSparkles() {
 		}
     </script>
 </head>
