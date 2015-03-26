@@ -7,12 +7,19 @@
 		window.onload = function() {
 		    setBoxColor();
 		    sparkle();
-		    document.addEventListener('mousemove', function() {sparkle();});
+		    document.addEventListener('mousemove', function() {
+		        if (Date.now() % 5 === 0) {
+		            sparkle();
+        		}
+		    });
 		}
 		function getRandomColor() {
 		    return 'rgb(' + Math.floor(Math.random() * 256) +
 		           ' ,' + Math.ceil(Math.random() * 256) +
                    ' ,' + Math.floor(Math.random() * 256) + ')';
+		}
+		function getRandomFontSize() {
+		    return Math.floor(Math.random() * 40) + 'px';
 		}
 		function setBoxColor() {
 		    var boxes = document.getElementsByClassName('box');
@@ -32,7 +39,8 @@
     				for (var k = 0; k < Math.floor(Math.random()*50); k++) {
 	    				rowString += '&nbsp';
 					}
-     	    		rowString += '<span style="color:' + getRandomColor() + '">.</span>';
+     	    		rowString += "<span style='color: " + getRandomColor() + ";" +
+								 "font-size: " + getRandomFontSize() + ";>*</span>";
 				}
 				sparkleString += rowString + '<BR>';
             }
