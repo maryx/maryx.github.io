@@ -10,7 +10,7 @@
 		}
 		function getRandomColor() {
 		    return 'rgb(' + Math.floor(Math.random() * 256) +
-		           ' ,' + Math.floor(Math.random() * 256) +
+		           ' ,' + Math.ceil(Math.random() * 256) +
                    ' ,' + Math.floor(Math.random() * 256) + ')';
 		}
 		function setBoxColor() {
@@ -21,10 +21,26 @@
 		    return;
 		}
 		function sparkles() {
-			
+			var sparkles = document.getElementById('sparkles');
+			var rows = 25;
+			var cols = 600;
+			var sparkleString = '';
+			for (var i = 0; i < rows; i++) {
+                var rowString = '';
+				while (rowString.length < cols) {
+    				for (var k = 0; k < Math.floor(Math.random()*50); k++) {
+	    				rowString += '&nbsp';
+					}
+     	    		rowString += '<span style="color:' + getRandomColor() + '">.</span>';
+				}
+				sparkleString += rowString + '<BR>';
+            }
+			sparkles.innerHTML = sparkleString;
 		}
     </script>
 </head>
+
+<div id="sparkles"> </div>
 
 <div id="menu">
 	<a href="index.html">
