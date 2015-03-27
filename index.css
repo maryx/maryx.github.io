@@ -59,6 +59,7 @@ div.box {
     color: #FFFFFF;
     vertical-align: middle;
     line-height: 100%;
+    opacity: 0.8;
 }
 div.box:hover {
     border-style: dotted;

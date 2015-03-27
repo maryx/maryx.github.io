@@ -15,32 +15,49 @@
 		}
 		function getRandomColor() {
 		    return 'rgb(' + Math.floor(Math.random() * 256) +
-		           ' ,' + Math.ceil(Math.random() * 256) +
-                   ' ,' + Math.floor(Math.random() * 256) + ')';
+		           ' ,' + Math.floor(Math.random() * 256) +
+                   ' ,' + Math.floor(Math.random() * 256) +
+		           ')';
+		}
+		function getRandomRedColor() {
+		    return 'rgb(' + Math.floor(Math.random() * 170 + 86) +
+		           ' ,' + Math.floor(Math.random() * 50) +
+                   ' ,' + Math.floor(Math.random() * 195 + 25) +
+		           ')';
 		}
 		function getRandomFontSize() {
-		    return Math.floor(Math.random() * 40) + 'px';
+		    return Math.floor(Math.random() * 50) + 'px';
+		}
+		function getRandomFontFamily() {
+		    var fonts = ['Arial', 'Minion Pro', 'Helvetica Neue',
+		                 'Rockwell', 'Gil Sans', 'Times New Roman', 'Trebuchet', 'Verdana',
+		                 'Papyrus', 'Palatino Linotype', 'Copperplate Gothic Bold'];
+		    return fonts[Math.floor(Math.random() * 11)] + ", Lucida Console";
 		}
 		function setBoxColor() {
 		    var boxes = document.getElementsByClassName('box');
 		    for (var i = 0; i < boxes.length; i++) {
-		        boxes[i].style.backgroundColor = getRandomColor();
+		        boxes[i].style.backgroundColor = getRandomRedColor();
 		    }
 		    return;
 		}
 		function sparkle() {
 			var sparkles = document.getElementById('sparkles');
-			var rows = 25;
-			var cols = 600;
+			var rows = 50;
+			var cols = 800;
 			var sparkleString = '';
 			for (var i = 0; i < rows; i++) {
                 var rowString = '';
 				while (rowString.length < cols) {
-    				for (var k = 0; k < Math.floor(Math.random()*50); k++) {
+    				for (var k = 0; k < Math.floor(Math.random()*30); k++) {
 	    				rowString += '&nbsp';
 					}
      	    		rowString += "<span style='color: " + getRandomColor() + ";" +
-								 "font-size: " + getRandomFontSize() + ";>*</span>";
+								 "font-size: " + getRandomFontSize() + ";" + 
+								 "font-family: " + getRandomFontFamily() + ";>";
+				    if (Date.now() %2 === 0) {
+						rowString += ".</span>";
+					} else rowString += "*</span>";
 				}
 				sparkleString += rowString + '<BR>';
             }
