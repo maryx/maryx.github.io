@@ -3,72 +3,11 @@
 <title>Mary Xia</title>
 <link rel="stylesheet" type="text/css" href="index.css">
 <head>
-    <script>
-		window.onload = function() {
-		    setBoxColor();
-		    sparkle();
-		    document.addEventListener('mousemove', function() {
-		        if (Date.now() % 5 === 0) {
-		            sparkle();
-        		}
-		    });
-		}
-		function getRandomColor() {
-		    return 'rgb(' + Math.floor(Math.random() * 256) +
-		           ' ,' + Math.floor(Math.random() * 256) +
-                   ' ,' + Math.floor(Math.random() * 256) +
-		           ')';
-		}
-		function getRandomRedColor() {
-		    return 'rgb(' + Math.floor(Math.random() * 170 + 86) +
-		           ' ,' + Math.floor(Math.random() * 50) +
-                   ' ,' + Math.floor(Math.random() * 195 + 25) +
-		           ')';
-		}
-		function getRandomFontSize() {
-		    return Math.floor(Math.random() * 50) + 'px';
-		}
-		function getRandomFontFamily() {
-		    var fonts = ['Arial', 'Minion Pro', 'Helvetica Neue',
-		                 'Rockwell', 'Gil Sans', 'Times New Roman', 'Trebuchet', 'Verdana',
-		                 'Papyrus', 'Palatino Linotype', 'Copperplate Gothic Bold'];
-		    return fonts[Math.floor(Math.random() * 11)] + ", Lucida Console";
-		}
-		function setBoxColor() {
-		    var boxes = document.getElementsByClassName('box');
-		    for (var i = 0; i < boxes.length; i++) {
-		        boxes[i].style.backgroundColor = getRandomRedColor();
-		    }
-		    return;
-		}
-		function sparkle() {
-			var sparkles = document.getElementById('sparkles');
-			var rows = 50;
-			var cols = 800;
-			var sparkleString = '';
-			for (var i = 0; i < rows; i++) {
-                var rowString = '';
-				while (rowString.length < cols) {
-    				for (var k = 0; k < Math.floor(Math.random()*30); k++) {
-	    				rowString += '&nbsp';
-					}
-     	    		rowString += "<span style='color: " + getRandomColor() + ";" +
-								 "font-size: " + getRandomFontSize() + ";" + 
-								 "font-family: " + getRandomFontFamily() + ";>";
-				    if (Date.now() %2 === 0) {
-						rowString += ".</span>";
-					} else rowString += "*</span>";
-				}
-				sparkleString += rowString + '<BR>';
-            }
-			sparkles.innerHTML = sparkleString;
-		}
-		function startSparkles() {
-		}
-    </script>
+    <script type="text/javascript" src="projects.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
-<div id="sparkles"> </div>
+<div id="sparkles"></div>
 
 <div id="menu">
 	<a href="index.html">
@@ -85,14 +24,15 @@
 		<div class="side-menu">LinkedIn</div></a>
 </div>
 
+
 <div class="section">
 	<div class="panel" align="center">
 		<a href="#lang-id">
-			<div class="box">Language Identifier</div></a>
+			<div class="box" onclick="renderSection(0)">Language Identifier</div></a>
 		<a href="#search-engine">
 			<div class="box">Search Engine</div></a>
 		<a href="#taste-of-chem">
-			<div class="box">Taste of Chemistry</div></a>
+			<div class="box" onclick="renderSection(1)">Taste of Chemistry</div></a>
 	</div>
 	<div class="panel" align="center">
 		<a href="#alarm-clock">
@@ -112,22 +52,11 @@
 	</div>
 </div>
 
-<div class="section" align="center">
-	<h2><span id="lang-id">Language Identifier</h2>
-	<div class="text" align="left">
-	</div>
-</div>
+<div class="section" id="page" align="center"></div>
 
-<div class="section" align="center">
+<!--div class="section" align="center">
 	<h2><span id="search-engine">Search Engine</h2>
 	<div class="text" align="left">
-	</div>
-</div>
-
-<div class="section" align="center">
-	<h2><span id="taste-of-chem">Taste of Chemistry</h2>
-	<div class="text" align="left">
-		The <a href="http://www.tasteofchemistry.org" target="_blank">Taste of Chemistry</a> program is a program for high school science teachers and covers taste and food science, so that the teachers can use the materials in their labs. Another component is a survey aimed at high school students that includes tasting various foods. Pilot data for 50 participants have been entered in the database and can be compared. The site was made with mySQL, PHP, and some JavaScript.</li>
 	</div>
 </div>
 
@@ -184,7 +113,7 @@
 	<div class="text" align="justify">
 		I like cooking. <BR>
 		The fonts used on this site are all available from Google Fonts, and include Tangerine, Glass Antiqua, and Averia Serif Libre.
-</p></div>
+</p></div!-->
 </div>
 </body>
 </html>
