@@ -1,5 +1,6 @@
 window.onload = function() {
-    setBoxColor();
+//    setBoxColor();
+    setBackgroundColor();
     sparkle();
     document.addEventListener('mousemove', function() {
         if (Date.now() % 5 === 0) {
@@ -36,17 +37,37 @@ function getRandomFontFamily() {
                  'Papyrus', 'Palatino Linotype', 'Copperplate Gothic Bold'];
     return fonts[Math.floor(Math.random() * fonts.length)] + ", Lucida Console";
 }
-function setBoxColor() {
+// function setBoxColor() {
+//     var boxes = document.getElementsByClassName('box');
+//     for (var i = 0; i < boxes.length; i++) {
+//         boxes[i].style.backgroundColor = getRandomRedColor();
+//     }
+//     return;
+// }
+function setBackgroundColor() {
+    var frostColor;
+    var textColor;
+    switch (Date.now() % 3) {
+        case 0: frostColor = '#000000'; textColor = '#FFFFFF'; break;
+        case 1: frostColor = '#FFFFFF'; textColor = '#000000'; break;
+        case 2: frostColor = '#FF6699'; textColor = '#000000'; break;
+    }    
+    document.getElementById('frost-text').style.color = frostColor;
+    document.getElementsByTagName('body')[0].style.backgroundColor = frostColor;
     var boxes = document.getElementsByClassName('box');
     for (var i = 0; i < boxes.length; i++) {
-        boxes[i].style.backgroundColor = getRandomRedColor();
+        boxes[i].style.borderColor = textColor;
+        boxes[i].style.color = textColor;
     }
-    return;
+    // var text = document.getElementsByTagName('p');
+    // for (var j = 0; j < text.length; j++) {
+    //     text[j].style.color = textColor;
+    // }
 }
 function sparkle() {
     var sparkles = document.getElementById('sparkles');
-    var rows = 50;
-    var cols = 800;
+    var rows = 25;
+    var cols = 650;
     var sparkleString = '';
     for (var i = 0; i < rows; i++) {
         var rowString = '';

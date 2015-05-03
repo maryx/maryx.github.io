@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Tangerine');
-@import url('https://fonts.googleapis.com/css?family=Glass%20Antiqua');
 @import url('https://fonts.googleapis.com/css?family=Averia%20Serif%20Libre');
 
 html {
@@ -14,7 +12,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: #000000;
 }
 #sparkles {
     overflow: hidden; /*hide scrolling*/
@@ -29,84 +27,83 @@ body {
     font-size: 30px;
     font-family: 'Lucida Console';
     text-align: center;
+    z-index: -2;
+    vertical-align: middle;
+    line-height: 100%;
+}
+#frost {
+    overflow: hidden; /*hide scrolling*/
+    scrolling: no;
+    height: auto;
+    top: 30px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    position: absolute;
+    font-size: 60px;
+    font-family: 'Averia Serif Libre';
+    text-align: center;
     z-index: -1;
     vertical-align: middle;
     line-height: 100%;
+}
+#frost-text {
+    color: #000000;
+    opacity: 0.5;
+    z-index: -1;
 }
 div.section {
     width: 100%; 
     height: 100%;
     background-color: transparent;
+    z-index: 1;
 }
 div.panel {
     width: 100%;
     height: auto;
 }
 div.box {
-    width: 200px;
+    width: 150px;
     height: 150px;
     display: inline-block;
     border-style: dashed;
     border-width: 5px;
-    border-color: #001200;
-    margin: 7px;
+    border-color: white; /* #001200; */
+    margin: 10px;
     border-radius: 5px;
-    font-size: 3em;
-    font-family: 'Glass Antiqua';
+    font-size: 30px;
+    font-family: 'Averia Serif Libre';
     font-weight: bold;
-    text-shadow: 0 0 0.15em black;
+    /*text-shadow: 0 0 0.15em black;*/
     text-align: center;
     color: white;
     vertical-align: middle;
-    line-height: 100%;
+    line-height: 45px;
     opacity: 0.8;
 }
+div.weird-box:hover {
+    text-shadow: none;
+}
 div.box:hover {
-    border-style: dotted;
-    border-color: #FAAADB;
-    text-shadow: 0 0 0.1em #FFFFFF, 0 0 1em #FF2040;
+    /* border-style: dotted; */
+    /* border-color: #FAAADB; */
+    text-shadow: 0 0 0.1em #FFFFFF, 0 0 1em #FFFFFF;/*#FF2040;*/
     color: black;
 }
 div.text {
     width: 50%;
     color: #FFFFFF;
+    background-color: #FF6699;
+    margin-top: 30px;
+    border-radius: 5px;
     padding: 30px;
     font-family: 'Averia Serif Libre', 'Arial', 'sans-serif';
     font-size: 18px;
 }
-div.side-menu {
-    width: 60px;
-    height: 40px;
-    border-style: dashed;
-    border-width: 3px;
-    border-color: #001200;
-    margin: 7px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-family: 'Glass Antiqua';
-    font-weight: bold;
-    text-decoration: none;
-    text-shadow: 0 0 0.15em #000000;
-    text-align: center;
-    color: #FFFFFF;
-    vertical-align: middle;
-    line-height: 100%;
-}
-div.side-menu:hover {
-    border-style: dotted;
-    border-width: 3px;
-    border-color: #FAAADB;
-}
-#menu {
-    position: fixed; /* or absolute */
-    top: 0;
-    left: 0;
-    width: 100%:
-    background: none;
-}
 a {
     text-decoration: none;
-    color: #FF6699;
+    /* color: #FF6699; */
 }
 a.tab {
     target="_blank";
@@ -123,8 +120,8 @@ h1 { /* TODO: actually use this */
 }
 h2 {
     font-size: 3em;
-    font-style:bold;
-    font-family: 'Glass Antiqua';
+    font-style: bold;
+    font-family: 'Averia Serif Libre';
     line-height: 78%;
     margin-bottom: 0;
     paddig-bottom: 10px;
