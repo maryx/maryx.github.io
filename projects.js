@@ -1,5 +1,11 @@
 var projects = [
     {
+        id: 'tablecloth',
+        name: 'Tablecloth: UI Engine',
+        link: 'https://github.com/maryx/tablecloth',
+        text: 'This is a lovely templating engine made specifically for food blogs. Made with React.'
+    },
+    {
         id: 'sengen',
         name: 'Sentence Generator',
         link: 'https://github.com/maryx/sengen',
